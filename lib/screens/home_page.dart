@@ -1,4 +1,4 @@
-import 'package:cached_network_image/cached_network_image.dart';
+
 import 'package:flutter/material.dart';
 import 'package:recipe_app_flutter/New_Recipe.dart';
 import 'package:tab_indicator_styler/tab_indicator_styler.dart';
@@ -102,7 +102,7 @@ class _HomePageState extends State<HomePage> {
             height: 250,
             decoration: const BoxDecoration(
               gradient: LinearGradient(
-                colors: [Colors.deepOrangeAccent, Colors.deepOrangeAccent],
+                colors: [Colors.deepOrange, Colors.deepOrangeAccent],
                 begin: Alignment.centerLeft,
                 end: Alignment.centerRight,
                 stops: [0.5, 0.9],
@@ -124,7 +124,7 @@ class _HomePageState extends State<HomePage> {
                     //   ),
                     // ),
                     CircleAvatar(
-                      backgroundColor: Colors.white70,
+                      backgroundColor: Colors.white,
                       minRadius: 60.0,
                       child: CircleAvatar(
                         radius: 50.0,
@@ -171,7 +171,7 @@ class _HomePageState extends State<HomePage> {
                     color: Colors.deepOrange.shade300,
                     child: const ListTile(
                       title: Text(
-                        '2k',
+                        '200k',
                         textAlign: TextAlign.center,
                         style: TextStyle(
                           fontWeight: FontWeight.bold,
@@ -192,10 +192,10 @@ class _HomePageState extends State<HomePage> {
                 ),
                 Expanded(
                   child: Container(
-                    color: Colors.red,
+                    color: Colors.deepOrange.shade300,
                     child: const ListTile(
                       title: Text(
-                        '2k',
+                        '20',
                         textAlign: TextAlign.center,
                         style: TextStyle(
                           fontWeight: FontWeight.bold,
@@ -256,7 +256,7 @@ class _HomePageState extends State<HomePage> {
                 Divider(),
                 ListTile(
                   title: Text(
-                    'Linkedin',
+                    'CookPad',
                     style: TextStyle(
                       color: Colors.deepOrange,
                       fontSize: 20,
@@ -264,7 +264,7 @@ class _HomePageState extends State<HomePage> {
                     ),
                   ),
                   subtitle: Text(
-                    'www.linkedin.com/in/example08',
+                    'www.cookpad.com/in/example08',
                     style: TextStyle(
                       fontSize: 18,
                     ),

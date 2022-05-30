@@ -24,7 +24,7 @@ class _LoginPageState extends State<LoginPage> {
           const Center(
             child: ImageIcon(
                 AssetImage("images/logo.png"),
-              size: 200.0,
+              size: 350.0,
               color: Colors.deepOrange,
             ),
           ),
