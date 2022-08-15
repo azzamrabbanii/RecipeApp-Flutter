@@ -1,10 +1,10 @@
-
 class RecipeModel {
   String title, writer, description;
   int cookingTime;
   int servings;
   List<String> ingredients = [];
   String imgPath;
+
   RecipeModel({
     required this.title,
     required this.writer,
@@ -14,12 +14,12 @@ class RecipeModel {
     required this.imgPath,
     required this.ingredients,
   });
+
   static List<RecipeModel> demoRecipe = [
     RecipeModel(
       title: 'Bubur Ayam Cirebon',
       writer: "abdullah",
-      description:
-          'Sarapan favorite indonesia',
+      description: 'Sarapan favorite indonesia',
       cookingTime: 45,
       servings: 4,
       imgPath: 'images/buburayam.jpg',
@@ -33,32 +33,29 @@ class RecipeModel {
     RecipeModel(
       title: 'Mie Goreng Jawa',
       writer: "Mualana Idris",
-      description:
-          'Makanan buatan orang jawa',
+      description: 'Makanan buatan orang jawa',
       cookingTime: 20,
-      servings: 4,
+      servings: 10,
       imgPath: 'images/miegoreng.jpg',
       ingredients: [
-            '- 1 bungkus mie telur',
-            '- 1 ikat sawi hijau potong-potong',
-            '- 2 butir telur kocok',
-            '- 5 butir bakso iris tipis',
-            '- 1 tangkai daun bawang rajang kasar',
-            '- Secukupnya kecap manis',
-            '- Secukupnya merica',
-            '- 1 sdm saus tiram',
-            '- 1 sdt kaldu bubuk',
-            '- Garam Secukupnya',
-
+        '- 1 bungkus mie telur',
+        '- 1 ikat sawi hijau potong-potong',
+        '- 2 butir telur kocok',
+        '- 5 butir bakso iris tipis',
+        '- 1 tangkai daun bawang rajang kasar',
+        '- Secukupnya kecap manis',
+        '- Secukupnya merica',
+        '- 1 sdm saus tiram',
+        '- 1 sdt kaldu bubuk',
+        '- Garam Secukupnya',
       ],
     ),
     RecipeModel(
       title: 'Nasi Goreng Special',
       writer: "Mas Agus",
-      description:
-          'makanan favorite indonesia',
+      description: 'makanan favorite indonesia',
       cookingTime: 15,
-      servings: 4,
+      servings: 6,
       imgPath: 'images/nasigoreng.jpg',
       ingredients: [
         '1 potong paha ayam atas bawah rebus, suwir ayamnya',
@@ -81,7 +78,7 @@ class RecipeModel {
       description:
           'Kuah soto Betawi memiliki tekstur yang kental dan rasa yang gurih karena menggunakan santan.',
       cookingTime: 40,
-      servings: 4,
+      servings: 38,
       imgPath: 'images/sotobetawi.jpeg',
       ingredients: [
         'Daging sapi - 500 gram',

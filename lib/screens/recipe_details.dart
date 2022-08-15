@@ -21,6 +21,7 @@ class RecipeDetails extends StatelessWidget {
         maxHeight: (size.height / 1.2),
         borderRadius: const BorderRadius.only(
             topLeft: Radius.circular(24), topRight: Radius.circular(24)),
+        backdropEnabled: true,
         parallaxEnabled: true,
         body: SingleChildScrollView(
           child: Stack(

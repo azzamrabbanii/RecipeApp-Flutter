@@ -1,6 +1,5 @@
-
 import 'package:flutter/material.dart';
-import 'package:recipe_app_flutter/New_Recipe.dart';
+import 'package:recipe_app_flutter/new_recipe.dart';
 import 'package:tab_indicator_styler/tab_indicator_styler.dart';
 
 class HomePage extends StatefulWidget {
@@ -11,18 +10,13 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
-
   int selectedIndex = 0;
 
   Widget customBottomNav() {
     return BottomNavigationBar(
       currentIndex: selectedIndex,
-      selectedIconTheme: const IconThemeData(
-        color: Colors.deepOrange
-      ),
-      unselectedIconTheme: const IconThemeData(
-        color: Colors.black
-      ),
+      selectedIconTheme: const IconThemeData(color: Colors.deepOrange),
+      unselectedIconTheme: const IconThemeData(color: Colors.black),
       onTap: (value) {
         setState(() {
           selectedIndex = value;
@@ -42,58 +36,71 @@ class _HomePageState extends State<HomePage> {
   }
 
   Widget HomeScreen() {
-    return SafeArea(child: DefaultTabController(
-      length: 3,
-      initialIndex: 0,
-      child: Column(children: [
-        const SizedBox(height: 40,
-        ),
-        TabBar(
-          isScrollable: true,
-          tabs: [
-            Tab(text: 'New Recipes'.toUpperCase(),),
-            Tab(text: 'Favourites'.toUpperCase(),),
-            Tab(text: 'Categories'.toUpperCase(),),
-          ],
-          labelColor: Colors.black,
-          indicator: DotIndicator(
-              color: Colors.black,
-              distanceFromCenter: 16,
-              radius: 3,
-              paintingStyle: PaintingStyle.fill
-          ),
-          unselectedLabelColor: Colors.black.withOpacity(0.3),
-          labelPadding: const EdgeInsets.symmetric(
-            horizontal: 24,
-          ),
-        ),
-        Expanded(
-          child: TabBarView(children: [
-            const NewRecipe(),
-            Container(
-              child: const Center(
-                child: Text("Favourites"),
+    return SafeArea(
+      child: DefaultTabController(
+        length: 3,
+        initialIndex: 0,
+        child: Column(
+          children: [
+            const SizedBox(
+              height: 40,
+            ),
+            TabBar(
+              isScrollable: true,
+              tabs: [
+                Tab(
+                  text: 'New Recipes'.toUpperCase(),
+                ),
+                Tab(
+                  text: 'Favourites'.toUpperCase(),
+                ),
+                Tab(
+                  text: 'Categories'.toUpperCase(),
+                ),
+              ],
+              labelColor: Colors.black,
+              indicator: DotIndicator(
+                  color: Colors.black,
+                  distanceFromCenter: 16,
+                  radius: 3,
+                  paintingStyle: PaintingStyle.fill),
+              unselectedLabelColor: Colors.black.withOpacity(0.3),
+              labelPadding: const EdgeInsets.symmetric(
+                horizontal: 24,
               ),
             ),
-            Container(
-              child: const Center(
-                child: Text("Categories"),
+            Expanded(
+              child: TabBarView(
+                children: [
+                  const NewRecipe(),
+                  Container(
+                    child: const Center(
+                      child: Text("Favourites"),
+                    ),
+                  ),
+                  Container(
+                    child: const Center(
+                      child: Text("Categories"),
+                    ),
+                  )
+                ],
               ),
             )
-          ],),
-        )
-      ],
+          ],
+        ),
       ),
-    ),
     );
   }
 
   Widget ProfileScreen() {
-    return  Scaffold(
+    return Scaffold(
       appBar: AppBar(
         backgroundColor: Colors.white,
         title: const Center(
-          child: Text('My Profile', style: TextStyle(color: Colors.black, fontWeight: FontWeight.bold),),
+          child: Text(
+            'My Profile',
+            style: TextStyle(color: Colors.black, fontWeight: FontWeight.bold),
+          ),
         ),
       ),
       body: ListView(
@@ -115,38 +122,22 @@ class _HomePageState extends State<HomePage> {
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceAround,
                   children: const <Widget>[
-                    // CircleAvatar(
-                    //   backgroundColor: Colors.red.shade300,
-                    //   minRadius: 35.0,
-                    //   child: const Icon(
-                    //     Icons.call,
-                    //     size: 30.0,
-                    //   ),
-                    // ),
                     CircleAvatar(
                       backgroundColor: Colors.white,
                       minRadius: 60.0,
                       child: CircleAvatar(
                         radius: 50.0,
-                        backgroundImage:
-                        NetworkImage('https://avatars.githubusercontent.com/u/88997018?v=4'),
+                        backgroundImage: NetworkImage(
+                            'https://avatars.githubusercontent.com/u/88997018?v=4'),
                       ),
                     ),
-                    // CircleAvatar(
-                    //   backgroundColor: Colors.red.shade300,
-                    //   minRadius: 35.0,
-                    //   child: const Icon(
-                    //     Icons.message,
-                    //     size: 30.0,
-                    //   ),
-                    // ),
                   ],
                 ),
                 const SizedBox(
                   height: 10,
                 ),
                 const Text(
-                  'Azzam Rabbani',
+                  'lorem ipsum',
                   style: TextStyle(
                     fontSize: 35,
                     fontWeight: FontWeight.bold,
@@ -282,7 +273,7 @@ class _HomePageState extends State<HomePage> {
     switch (selectedIndex) {
       case 0:
         return HomeScreen();
-            break;
+        break;
       case 1:
         return ProfileScreen();
         break;
@@ -293,9 +284,6 @@ class _HomePageState extends State<HomePage> {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      bottomNavigationBar: customBottomNav(),
-      body: body()
-    );
+    return Scaffold(bottomNavigationBar: customBottomNav(), body: body());
   }
 }
